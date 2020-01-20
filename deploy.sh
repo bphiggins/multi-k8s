@@ -11,6 +11,6 @@ docker push sparkymaster/multi-server:$SHA
 docker push sparkymaster/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=sparkymaster/multi-server:$SHA
 kubectl set image deployments/client-deployment client=sparkymaster/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=sparkymaster/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=sparkymaster/multi-server:$SHA
+kubectl set image deployments/worker-deployment worker=sparkymaster/multi-worker:$SHA
